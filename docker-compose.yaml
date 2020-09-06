@@ -1,0 +1,14 @@
+version: "2.3"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: product_management_api
+    ports:
+      - 9090:9090
+    volumes:
+      - ./config.json:/app/config.json
+
+#  swagger:
+#    image: "quay.io/goswagger/swagger:lastest"
